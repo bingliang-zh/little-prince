@@ -2,10 +2,10 @@
 
 public class CameraFollow : MonoBehaviour {
     public Transform player;
+    public Transform planet;
 
     void LateUpdate() {
-        Vector3 newPosition = player.position * 2;
-        transform.SetPositionAndRotation(newPosition, player.rotation);
-        
+        transform.position = player.position * 2;
+        transform.LookAt(planet, player.forward);
     }
 }

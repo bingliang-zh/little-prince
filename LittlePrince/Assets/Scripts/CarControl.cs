@@ -8,7 +8,6 @@ public class CarControl : MonoBehaviour {
 
     void Update() {
         moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
-        Debug.Log(moveDir);
     }
 
     void FixedUpdate() {
